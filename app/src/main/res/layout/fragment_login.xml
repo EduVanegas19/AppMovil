@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Crear Cuenta"
+        android:text="Iniciar Sesion"
         android:textStyle="bold"
         android:textSize="24sp"
         android:layout_marginTop="78dp"
@@ -22,16 +22,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerInParent="true">
-
-
-        <EditText
-            android:id="@+id/txtNombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:layout_margin="8dp"
-            android:background="@drawable/text_box"
-            android:hint="Name"/>
 
         <EditText
             android:id="@+id/txtEmail"
@@ -50,17 +40,31 @@
             android:layout_margin="8dp"
             android:background="@drawable/text_box"
             android:hint="Contrasena"/>
-
-        <EditText
-            android:id="@+id/txtConfirmarContrasena"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:layout_margin="8dp"
-            android:background="@drawable/text_box"
-            android:hint="Confirmar Contrasena"/>
+            android:text="Cambiar Contrasena"
+            android:textColor="@color/black"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/txtCambiarContrasena"
+            android:layout_marginRight="16dp"
+            android:textStyle="bold"/>
+
 
     </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesion"
+        android:background="@drawable/btn_bg"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="#fff"
+        android:layout_above="@+id/btnSesionGoogle"
+        android:layout_marginBottom="16dp"
+        android:id="@+id/btnIniciarSesion"/>
 
     <Button
         android:layout_width="match_parent"
@@ -70,18 +74,18 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:textColor="#fff"
-        android:layout_above="@+id/txtCrearCuenta"
+        android:layout_above="@+id/txtLogin"
         android:layout_marginBottom="16dp"
-        android:id="@+id/btnCrearCuenta"/>
+        android:id="@+id/btnSesionGoogle"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:id="@+id/txtCrearCuenta"
+        android:id="@+id/txtLogin"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="26dp"
-        android:text="Regresar para iniciar sesion"
+        android:text="Crear cuenta,iniciar sesion"
         android:textStyle="bold"/>
 
 
