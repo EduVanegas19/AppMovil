@@ -5,12 +5,13 @@ plugins {
 
 android {
     namespace = "com.exydos.redsocial"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.exydos.redsocial"
         minSdk = 22
         targetSdk = 33
+        multiDexEnabled; true
         versionCode = 1
         versionName = "1.0"
 
@@ -45,6 +46,7 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore:24.9.1")
     implementation("com.google.firebase:firebase-auth:22.2.0")
     implementation("com.google.firebase:firebase-storage:20.3.0")
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
 
 
 
