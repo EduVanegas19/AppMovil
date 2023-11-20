@@ -195,12 +195,15 @@ public class LoginFragment extends Fragment {
 
         Map<String, Object> map = new HashMap<>();
 
-        map.put("nombre", cuenta.getDisplayName());
-        map.put("correo", cuenta.getEmail());
-        map.put("imagenPerfil", String.valueOf(cuenta.getPhotoUrl()));
+        map.put("name", cuenta.getDisplayName());
+        map.put("email", cuenta.getEmail());
+        map.put("profileImage", String.valueOf(cuenta.getPhotoUrl()));
         map.put("uid", usuario.getUid());
+        map.put("following", 0);
+        map.put("followers", 0);
+        map.put("status", " ");
 
-        FirebaseFirestore.getInstance().collection("usuarios").document(usuario.getUid()).set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+        FirebaseFirestore.getInstance().collection("Users").document(usuario.getUid()).set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){

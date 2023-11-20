@@ -62,11 +62,9 @@ public class CreateAccount extends Fragment {
     }
 
     private void clickListener() {
-        txtIniciarS.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
+
+        txtIniciarS.setOnClickListener(v ->  {
                 ((FragmentReplace) getActivity()).setFragment(new LoginFragment());
-            }
         });
 
         btnCrearCuenta.setOnClickListener(new View.OnClickListener(){
@@ -128,12 +126,15 @@ public class CreateAccount extends Fragment {
     private void uploadUser(FirebaseUser usuario, String nombre, String correo){
         Map<String, Object> map = new HashMap<>();
 
-        map.put("nombre", nombre);
-        map.put("correo", correo);
-        map.put("imagenPerfil", " ");
+        map.put("name", nombre);
+        map.put("email", correo);
+        map.put("profileImage", " ");
         map.put("uid", usuario.getUid());
+        map.put("following", 0);
+        map.put("followers", 0);
+        map.put("status", " ");
 
-        FirebaseFirestore.getInstance().collection("usuarios").document(usuario.getUid()).set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+        FirebaseFirestore.getInstance().collection("Users").document(usuario.getUid()).set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){

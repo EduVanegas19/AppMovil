@@ -6,54 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_alignParentTop="true"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:id="@+id/toolbarMain"
-        android:background="@android:color/white"
-        android:elevation="2dp"
-        app:contentInsetEnd="0dp"
-        app:contentInsetStart="0dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="@string/app_name"
-                android:layout_centerVertical="true"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:textColor="@android:color/black"/>
-
-            <ImageView
-                android:id="@+id/btnSend"
-                android:layout_width="27dp"
-                android:layout_height="25dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/paper_plane_regular"
-                android:contentDescription="@null" />
-
-        </RelativeLayout>
-
-    </androidx.appcompat.widget.Toolbar>
-
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/viewPager"
-        android:layout_above="@+id/tabLayout"
-        android:layout_below="@id/toolbarMain"/>
+        android:layout_above="@+id/tabLayout"/>
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
